@@ -11,8 +11,7 @@
   <body>
 
     <header>
-      <h1>Style Guide of Fang Ceramics</h1>
-      <p>Ceramic Products for Home & Soul</p> 
+      <h1>Style Guide of My Portfolio</h1>
     </header>
 
     <nav class="sticky navigation-normal">        
@@ -21,7 +20,7 @@
         <li><a href="#text_elements" >Text</a></li>
         <li><a href="#combined_elements" >Components</a></li>
         <li><a href="#branding_ideas" >Branding</a></li>
-        <li><a href="home.html" >Website</a></li>
+        <li><a href="work.html" >Website</a></li>
         <li><a href="#citations" >Citations</a></li>
      </ul> 
     </nav>
@@ -34,16 +33,13 @@
 
 
       <section class="in_text_link_section">
-        <h3>In-text link</h3>
+        <h3>In-text-link</h3>
 
         <h4>CSS selector:</h4>
-        <p>.in-text-link</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;a href="#" class="in-text-link" target="_blank"&gt;Click here&lt;/a&gt;</code>
+        <p>.in_text_link</p>
 
         <h4>Rendered element:</h4>
-          <a href="#" class="in-text-link" target="_blank">Click here</a> 
+          <a href="#" class="in_text_link" target="_blank">Click here</a> 
      
       </section>
 
@@ -54,16 +50,16 @@
 
 
         <h4>CSS selector:</h4>
-        <p>.button-nav1</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;a href="#" class="button-nav1"&gt;Home&lt;/a&gt;</code>
+        <p>ul a</p>
 
         <h4>Rendered element:</h4>
-        <div class="navigation-normal">
-          <a href="#">Home</a>
-        </div>
-
+        <nav id="top_nav">
+          <ul>
+            <li><a href="#">Work</a ></li>
+            <li><a href="#">About</a ></li>
+            <li ><a href="#">Resume</a ></li>
+          </ul>
+        </nav>
 
       </section>
 
@@ -71,159 +67,27 @@
       <section class="button_section">
         <h3>Buttons</h3>
 
-        <div class="button_container_1">
-          <div>
-            <p>By style</p>
-            <h4>Filled buttons:</h4>
-            <input type="submit" value="Submit" id="submit-button">
 
-            <h4>Ghost buttons:</h4>
-            <input type="reset" value="Reset" id="reset-button">
-          </div>
-  
-          <div>
-            <p>By size</p>
-            <h4>Large buttons:</h4>
-            <input type="button" id="buy-now" onclick="location.href='result.html'" value="Buy now">
+        <h4>CSS selector:</h4>
+        <p>.view_work</p>
 
-            <h4>small buttons:</h4>
-            <input type="button" id="apply" value="Apply">        
-          </div>
+        <h4>Rendered element:</h4>
+        <input type="button" class="view_work" value="View Work">
 
-          <div>
-            <p>Buttons with icons</p>
-            <h4>Return button:</h4>
-            <div id="return_button">
-             <a href="cart.html" class="in-text-link"><img class="back-icon" src="images/checkout/back.png" alt="Back">Return to cart</a>
-            </div>
-          </div>
-
-        </div>
  
       </section>
 
-
-      <section class="quantity_selector_section">
-        <h3>Quantity Selectors</h3>
-
-        <h4>CSS selector:</h4>
-        <p>.quantity_selector</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;div class="quantity_selector"&gt;</code>
-        <code>&lt;span class="minus"&gt;-&lt;/span&gt;</code>
-        <code>&lt;span class="num"&gt;1&lt;/span&gt;</code>
-        <code>&lt;span class="plus"&gt;+&lt;/span&gt;</code>
-
-      
-        <h4>Rendered element:</h4>
-        <div class="quantity_selector">
-          <span class="minus">-</span>
-          <span class="num">1</span>
-          <span class="plus">+</span>
-        </div>
-
-        <script>
-          const plus = document.querySelector(".plus"),
-          minus = document.querySelector(".minus"),
-          num = document.querySelector(".num");
-          
-          let a = 1; 
-
-          plus.addEventListener("click",()=>{
-            a++;
-            console.log(a);
-            num.innerText = a;
-          });
-
-          minus.addEventListener("click",()=>{
-            if(a>1){
-              a--;
-              num.innerText = a;
-            }
-          });
-
-        </script>
-
-      </section>
-
-
-      <section class="text_field_section">
-        <h3>Text Input Field with Label</h3>
-
-        <h4>CSS selector:</h4>
-        <p>input[type=text]</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;</code>
-        <code>&lt;input type="text" id="fname" name="fname" placeholder="Enter here"&gt;</code>
-        
-        <h4>Rendered element:</h4>          
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="Enter here">
-      </section>
-
-
-
-      <section class="radio_button_section">
-        <h3>Radio Button with Label</h3>
-          
-        <h4>CSS selector:</h4>
-        <p>input[type="radio"]</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;input type="radio" class="radio-type" name="payment-method" id="creadit-card" value="1"&gt;</code>
-        <code>&lt;label for="credit-card"&gt;Credit card&lt;/label&gt;</code>
-        <code>&lt;input type="radio" class="radio-type" id="PayPal" name="payment-method" value="2"&gt;</code>
-        <code>&lt;label for="PayPal"&gt;PayPal&lt;/label&gt;</code>
-        <code>&lt;input type="radio" class="radio-type-disabled" id="wechat" name="payment-method" value="3"&gt;</code>
-        <code>&lt;label for="Wechat"&gt;Wechat&lt;/label&gt;</code>
-
-
-        <h4>Rendered element:</h4>
-        <div class="payment-radio">
-          <input class="radio-type" type="radio" id="credit-card" name="payment-method" value="1">
-          <label for="credit-card">Credit card</label>
-        </div>
-
-        <div class="payment-radio">
-          <input class="radio-type" type="radio" id="PayPal" name="payment-method"  value="2">  
-          <label for="PayPal"> PayPal</label>
-        </div>
-
-        <div class="payment-radio">
-          <input class="radio-type-disabled" type="radio" id="wechat" name="payment-method" disabled>
-          <label for="wechat">Wechat</label>
-        </div>
-
-        
-        <h4>Rendered element (radio button with icons):</h4>
-        <div class="delivery-method">
-          <div class="delivery-method-box">
-            <input class="radio-type" type="radio" id="delivery-method1" name="delivery-method" value="1">
-            <label for="delivery-method1"><img class="icon-delivery" src="images/checkout/ship.png" alt="Ship">Ship</label>
-          </div>
-          <div class="delivery-method-box">
-            <input class="radio-type" type="radio" id="delivery-method2" name="delivery-method" value="2">
-            <label for="delivery-method2"><img class="icon-delivery" src="images/checkout/pickup.png" alt="Pickup">Pick up</label>
-          </div>
-        </div>
-
-      </section>
 
 
       <section class="image_as_link_section">
         <h3>Image as a Link</h3>
 
         <h4>CSS selector:</h4>
-        <p>#mug</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;a href="#"&gt;&lt;img id="imagelink" src="mug.png" alt="A handmade Japanese mug"&gt;&lt;/a&gt;</code>
+        <p>.image_link</p>
 
         <h4>Rendered element:</h4>
         <a href="#"> 
-          <img id="imagelink" src="images/styleguide/mug.png" alt="A handmade Japanese mug">
+          <img class="image_link" src="images/work/image3.png" alt="First work">
         </a>
 
       </section>
@@ -242,21 +106,12 @@
           <h3>Headings</h3>
           
           <h4>CSS selector:</h4>
-          <p>h1</p>
-          <p>h2</p>
-          <p>h3</p>
-          <p>h4</p>
-
-          <h4>Sample code:</h4>
-          <code>&lt;h1&gt;The First Level of Heading&lt;/h1&gt;</code>
-          <code>&lt;h2&gt;The Second Level of Heading&lt;/h2&gt;</code>
-          <code>&lt;h3&gt;The Third Level of Heading&lt;/h3&gt;</code>
-          <code>&lt;h4&gt;The Fourth Level of Heading&lt;/h4&gt;</code>
+          <p>h1, h2, h3, h4</p>
 
           <h4>Rendered element:</h4>
-          <h1>Page Title - Use as the title for the whole web-page</h1>
-          <h2 id="h2_headings">Card Title - Use as the title of a card</h2>
-          <h3>Section Title - Use to seperate sections</h3>
+          <h1>The First Level of Heading</h1>
+          <h2>The Second Level of Heading</h2>
+          <h3>The Third Level of Heading</h3>
           <h4>The Forth Level of Heading</h4>
 
         </div>
@@ -265,31 +120,23 @@
         <h3>Paragraphs</h3>
 
         <h4>CSS selector:</h4>
-        <p>p</p>
+        <p>.body_text</p>    
+        <p>.strong_text</p>
 
-        <h4>Sample code:</h4>
-        <code>&lt;p&gt;We are a passionate and creative group of ceramic artists based in Burnaby, British Columbia. Our goal is to co-design and handcraft a unique collection of high-quality ceramic pieces, including mugs, glasses and a variety of other functional and decorative items. Our group is dedicated to providing a welcoming and inclusive environment, where artists of all levels can learn, collaborate and grow together. To stay connected with us, be sure to attend one of our regular events, where you can meet other artists, learn new techniques and see our latest creations in person. We are always looking for new members to join us on this exciting journey, so don't hesitate to get in touch and become a part of our creative community!&lt;/p&gt;</code>
-
-        <!-- Shorten the default width of the <p> element, but ensure it is still responsive when the viewport shrinks. -->
         <h4>Rendered element:</h4>
-        <P>We are a passionate and creative group of ceramic artists based in Burnaby, British Columbia. Our goal is to co-design and handcraft a unique collection of high-quality ceramic pieces, including mugs, glasses and a variety of other functional and decorative items. Our group is dedicated to providing a welcoming and inclusive environment, where artists of all levels can learn, collaborate and grow together. To stay connected with us, be sure to attend one of our regular events, where you can meet other artists, learn new techniques and see our latest creations in person. We are always looking for new members to join us on this exciting journey, so don't hesitate to get in touch and become a part of our creative community!</P>
-
+        <p class="body_text">This is a project I <span class="strong_text">personally initiated</span> to help Shanghai residents solve the problem of garbage recycling difficulties.
+          I started this project independently and was responsible for the project's research, interface design, user testing and high-fidelity prototype production.
+        </p>
 
       </section>
 
+      <!--
       <section class="numbered_list_section">
         <h3>Numbered Lists</h3>
 
         <h4>CSS selector:</h4>
         <p>ol</p>
         <p>li</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;ol&gt;</code>
-        <code>&lt;li&gt;Item&lt;/li&gt;</code>  
-        <code>&lt;li&gt;Price&lt;/li&gt;</code>
-        <code>&lt;li&gt;Quantity&lt;/li&gt;</code>
-        <code>&lt;/ol&gt;</code>
 
         <h4>Rendered element:</h4>
         <ol>
@@ -298,7 +145,8 @@
           <li>Quantity</li>
         </ol> 
       </section>
-      
+      -->
+
     </div>
 
     <!-- // TEXT ELEMENTS SECTION -->
@@ -312,96 +160,16 @@
       <section class="main_nav_section">
         <h3>Main Navigation</h3>
 
-        <!-- <h4>CSS selector:</h4>
-        <p>.topnav</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;nav class="topnav"&gt;</code>
-        <code>&lt;a href="#" class="button-nav"&gt;Home&lt;/a&gt;</code>
-        <code>&lt;a href="#" class="button-nav"&gt;Shop&lt;/a&gt;</code>
-        <code>&lt;a href="#" class="button-nav"&gt;Course&lt;/a&gt;</code>
-        <code>&lt;a href="#" class="button-nav"&gt;About&lt;/a&gt;</code>
-        <code>&lt;/nav&gt;</code> -->
-
         <h4>Rendered elements:</h4>
-        <!-- <nav>
-          <a href="#" class="button-nav">Home</a>
-          <a href="#" class="button-nav">Shop</a>
-          <a href="#" class="button-nav">Course</a>
-          <a href="#" class="button-nav">About</a>
-        </nav> -->
-        <nav class="navigation-normal">
-          <ul>
-            <li><a href="#">Home</a ></li>
-            <li><a href="#">Shop</a ></li>
-            <li ><a href="#">About</a ></li>
-            <li><a href="#">Cart</a ></li>
-          </ul>
-        </nav>
-
-
-      </section>
-
-      <!-- 
-      <section class="second_nav_section">
-        <h3>Secondary Navigation</h3>
-
-        <h4>CSS selector:</h4>
-        <p>.topnav</p>
-
-        <h4>Sample code:</h4>
-
-
-        <h4>Rendered elements:</h4>
-        <div>
-          <a href="#" class="secondary-selector-checked">Checked</a>
-          <a href="#" class="secondary-selector-unchecked">Unchecked</a>
-          <a href="#" class="secondary-selector-unchecked">Unchecked</a>
-        </div>
-      </section>
-      --> 
-
-      <section class="navigation-bar-with-drop-down-menu">
-        <h3>Navigation Bar with Drop-down Menu</h3>
-
-        <h4>Rendered elements:</h4>
-        <nav class="navigation-normal">
-          <ul>
-            <!-- <li><a href="#">Home</a ></li>
-            <li><a href="#">Shop</a ></li> -->
-            <li ><a href="#">About<div class="triangle"></div></a >
-              <ul class="secondary-style">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </li>
-            <!-- <li><a href="#">Cart</a ></li> -->
-          </ul>
-        </nav>
-
-      </section>
-
-      <section class="mobile-hamburger-navigation">
-        <h3>Mobile Hamburger Navigation</h3>
-
-        <h4>Rendered elements:</h4>
-        <div class="navigation-hamburger">
-          <div class="hidden-content"></div>
-          <div id="menuToggle">
-            <input type="checkbox" id="checkbox-hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="menu">
-                <li ><a href="home.html">Home</a ></li>
-                <li id="hamburger-style-1"><a href="shop.html">Shop</a ></li>
-                <li id="hamburger-style-2"><a href="about.html">About Us</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li id="hamburger-style-3"><a href="cart.html">Cart</a ></li>
+        <div class="container_nav">
+          <a href="work.html" id="my_name">Jiefang Li</a>
+          <nav id="top_nav">
+            <ul>
+              <li><a href="work.html">Work</a ></li>
+              <li><a href="about.html">About</a ></li>
+              <li ><a href="https://drive.google.com/file/d/1ilSDPr38J20eE-0xOIcTPWDny7pMqRMl/view?usp=share_link">Resume</a ></li>
             </ul>
-         </div>    
+          </nav>
         </div>
 
       </section>
