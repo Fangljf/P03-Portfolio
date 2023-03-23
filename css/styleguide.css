@@ -63,14 +63,15 @@ section {
   font-weight: 600;
   color: #333333;
  }
- 
+
 .container_nav {
-  max-width: 90%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   display:flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 
 
@@ -317,86 +318,36 @@ nav li {
 
 }
 
-/* product cards */
+/* product cards (start) */
 
-.container1 {
+
+.works_collection {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content:center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  margin-left:auto;
-  margin-right:auto;
-  max-width: 900px;
-
+  margin-bottom: 2rem;
 }
 
-
-.card:hover{
-  box-shadow: 0 4px 16px #efd5c9;
-  transform: translate(0px,-8px);
+.work_image {
+  width: 36vw;
+  border-radius: 20px;
 }
 
-
-.card {
-  width: 28%;
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px #efedec;
-  transition: .4s;
-  margin: 0.5rem;
-  text-align: center;
+.work_text {
+  margin-left: 4rem;
+  width: 36vw;
 }
 
-
-.mug {
-  max-width: 250px;
-  min-width: 200px;
-  min-height: 200px;
-  position:relative;
-  margin:0 auto;
-  display: block;
-  text-align: center;  
+.work_intro {
+  font-size: 18px;
+  line-height: 2rem;
+  margin-top: -0.5rem;
 }
-
-.mug:hover {
-  opacity:0.7; 
-}
-
-.mug:focus {
-  opacity:0.7;
-}
-
-
-.product_list_section {
-  max-width: 900px;
-  padding-bottom: 2rem;
-}
-
-.add_to_cart {
-  height: 40px;
-  width: 120px;
-  font-size:14px;
-  font-weight: 600;
-  color: #b86646;
-  background-color: #ffffff;
-  border:1px solid #b86646;
-  border-radius: 4px;
-  font-family: 'Raleway', sans-serif;
-  cursor: pointer;
-}
-
-.add_to_cart:hover {
-  background-color:#b86646;
-  transition-property: background-color; 
-  transition-duration: 0.5s;
-  color:#ffffff;
-  cursor: pointer;
-}
-
 /* product card (end) */
 
 #payment-form {
@@ -553,31 +504,31 @@ nav li {
 
 
 #palette1 {
-  background-color: #E3D0B5;
+  background-color: #C8E9DB;
   font-weight: bolder;
 }
 
 #palette2 {
-  background-color: #B86646;
+  background-color: #FEFAEC;
   font-weight: bolder;
   color:#ffffff;
 }
 
 
 #palette3 {
-  background-color: #7C6354;
+  background-color: #649173;
   font-weight: bolder;
   color:#ffffff;
 }
 
 #palette4 {
-  background-color: #635B50;
+  background-color: #333333;
   font-weight: bolder;
   color:#ffffff;
 }
 
 #palette5 {
-  background-color: #3b3431;
+  background-color: #888888;
   font-weight: bolder;
   color:#ffffff;
 }
@@ -586,10 +537,6 @@ nav li {
   font-weight: 200;
 }
 
-#moodboard {
-  max-width: 100%;  
-  display: block;
-}
 
 #icons {
   max-width: 100%;  
