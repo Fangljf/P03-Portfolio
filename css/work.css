@@ -80,6 +80,9 @@ nav a {
 nav a:hover,
 nav a:focus {
   color: #649173;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  /*Show underline on hover: https://stackoverflow.com/questions/22674633/text-that-shows-an-underline-on-hover*/
 }
 
 nav ul {
@@ -206,11 +209,13 @@ footer {
 }
   
 .in_text_link:hover {
-  color:#8bbe9c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
   
 .in_text_link:focus {
-  color:#8bbe9c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
   
 /* footer (end) */

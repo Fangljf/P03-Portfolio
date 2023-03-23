@@ -17,7 +17,7 @@ h1{
   font-family: 'Inter', sans-serif;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 48px;
-  color: #333333;
+  color: #649173;
 }
 
 h2{
@@ -33,6 +33,7 @@ h3{
   font-family: 'Plus Jakarta Sans', sans-serif;  
   color: #333333;
   font-size: 28px;
+  margin-bottom: 0;
 }
 
 h4 {
@@ -80,6 +81,9 @@ nav a {
 nav a:hover,
 nav a:focus {
   color: #649173;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  /*Show underline on hover: https://stackoverflow.com/questions/22674633/text-that-shows-an-underline-on-hover*/
 }
 
 nav ul {
@@ -96,83 +100,61 @@ nav li {
 
 /* Navigation(end) */
 
-#gradient {
-  height: 660px;
-  width: 100%;
-  z-index: -100;
-  background-color: #FEFAEC; 
-  background-image: linear-gradient(#C8E9DB, #FEFAEC);
-  /*background-image: linear-gradient(#CFDEF3, #E0EAFC);*/
-  top: 0;
-  position: absolute;
-}
 
 
 .bio {
-  max-width: 90%;
+  width: 90%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bio_text {
+  width: 50%;
+}
+
+.body_text{
+font-size: 18px;
+line-height: 2rem;}
+
+
+.strong_text {
+  font-weight: 700;
+}
+
+
+.bio_image {
+  width: 40%;
+  border-radius: 20px;
+}
+
+#my_image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+.interests {
+  width: 90%;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
   margin-top: 6rem;
 }
 
-.white_color {
-  color: #649173;
-}
-
-.strong_text {
-  font-weight: 700;
-}
-
-.works_collection {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10rem;
-}
-
-.work {
-  width: 100%;
+#photo_container {
   display: flex;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.work_image {
-  width: 36vw;
-  border-radius: 20px;
+.hobby {
+  width: 24%;
 }
-
-.work_text {
-  margin-left: 4rem;
-  width: 36vw;
-}
-
-.work_intro {
-  font-size: 18px;
-  line-height: 2rem;
-  margin-top: -0.5rem;
-}
-
-.view_work {
-  padding: 10px 24px;
-  font-size: 16px;
-  text-decoration: none;
-  color: #649173;
-  background-color: transparent;
-  border-style: none;
-  border-radius: 50px;
-  outline: #649173 1px solid;
-  cursor: pointer;
-}
-
-.view_work:hover {
-  color: #ffffff;
-  background-color: #649173;
-  outline: #649173 1px solid;
-  cursor: pointer;
-  transition: all .4s ease-in-out;
-}
-/* Knowledge of hovering effect is from https://alvarotrigo.com/blog/best-css-button-hover-effects/*/
 
 /* footer */
 
@@ -197,13 +179,15 @@ footer {
   color:#649173;
   text-decoration: none;
 }
-  
+
 .in_text_link:hover {
-  color:#8bbe9c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
   
 .in_text_link:focus {
-  color:#8bbe9c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
   
 /* footer (end) */
