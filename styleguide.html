@@ -3,9 +3,10 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=0.5"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"> 
     <title>Style Guide of My Portfolio</title>
     <link href="css/styleguide.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
 
   <body>
@@ -14,7 +15,7 @@
       <h1>Style Guide of My Portfolio</h1>
     </header>
 
-    <nav class="sticky navigation-normal">        
+    <nav class="sticky navigation">        
       <ul>
         <li><a href="#interactive_elements">Interactive Elements</a></li>
         <li><a href="#text_elements" >Text</a></li>
@@ -31,67 +32,66 @@
     <section id="interactive_elements">
       <h2>Interactive Elements</h2>
 
+      <div class="section1_wrapper">
 
-      <section class="in_text_link_section">
-        <h3>In-text-link</h3>
+        <section class="in_text_link_section">
+          <h3>In-text-link</h3>
 
-        <h4>CSS selector:</h4>
-        <p>.in_text_link</p>
+          <h4>CSS selector:</h4>
+          <p>.in_text_link</p>
 
-        <h4>Rendered element:</h4>
-          <a href="#" class="in_text_link" target="_blank">Click here</a> 
-     
-      </section>
-
-
-      <!-- Default Button styling section -->
-      <section class="nav_link_section">
-        <h3>Navigation Link</h3>
+          <h4>Rendered element:</h4>
+            <a href="#" class="in_text_link" target="_blank">Click here</a> 
+      
+        </section>
 
 
-        <h4>CSS selector:</h4>
-        <p>ul a</p>
-
-        <h4>Rendered element:</h4>
-        <nav id="top_nav">
-          <ul>
-            <li><a href="#">Work</a ></li>
-            <li><a href="#">About</a ></li>
-            <li ><a href="#">Resume</a ></li>
-          </ul>
-        </nav>
-
-      </section>
+        <section class="nav_link_section">
+          <h3>Navigation Link</h3>
 
 
-      <section class="button_section">
-        <h3>Buttons</h3>
+          <h4>CSS selector:</h4>
+          <p>ul a</p>
+
+          <h4>Rendered element:</h4>
+          <nav class="top_nav">
+            <ul>
+              <li><a href="#">Work</a ></li>
+              <li><a href="#">About</a ></li>
+              <li ><a href="#">Resume</a ></li>
+            </ul>
+          </nav>
+
+        </section>
 
 
-        <h4>CSS selector:</h4>
-        <p>.view_work</p>
+        <section class="button_section">
+          <h3>Buttons</h3>
 
-        <h4>Rendered element:</h4>
-        <input type="button" class="view_work" value="View Work">
+          <h4>CSS selector:</h4>
+          <p>.view_work</p>
 
- 
-      </section>
+          <h4>Rendered element:</h4>
+          <input type="button" class="view_work" value="View Work">
+
+        </section>
+      
 
 
+        <section class="image_as_link_section">
+          <h3>Image as a Link</h3>
 
-      <section class="image_as_link_section">
-        <h3>Image as a Link</h3>
+          <h4>CSS selector:</h4>
+          <p>.image_link</p>
 
-        <h4>CSS selector:</h4>
-        <p>.image_link</p>
+          <h4>Rendered element:</h4>
+          <a href="#"> 
+            <img class="image_link" src="images/work/image2.png" alt="First work">
+          </a>
 
-        <h4>Rendered element:</h4>
-        <a href="#"> 
-          <img class="image_link" src="images/work/image3.png" alt="First work">
-        </a>
+        </section>
 
-      </section>
-
+      </div>
 
     </section>
     <!-- // INTERACTIVE ELEMENTS SECTION -->
@@ -101,6 +101,7 @@
     <!-- TEXT ELEMENTS SECTION // -->
     <div id="text_elements">
       <h2>Text Elements</h2>
+      <div class="section2_wrapper">
 
         <div class="heading_section">
           <h3>Headings</h3>
@@ -116,37 +117,21 @@
 
         </div>
 
-      <section class="paragraph_section">
-        <h3>Paragraphs</h3>
+        <section class="paragraph_section">
+          <h3>Paragraphs</h3>
 
-        <h4>CSS selector:</h4>
-        <p>.body_text</p>    
-        <p>.strong_text</p>
+          <h4>CSS selector:</h4>
+          <p>.body_text</p>    
+          <p>.strong_text</p>
 
-        <h4>Rendered element:</h4>
-        <p class="body_text">This is a project I <span class="strong_text">personally initiated</span> to help Shanghai residents solve the problem of garbage recycling difficulties.
-          I started this project independently and was responsible for the project's research, interface design, user testing and high-fidelity prototype production.
-        </p>
+          <h4>Rendered element:</h4>
+          <p class="body_text">This is a project I <span class="strong_text">personally initiated</span> to help Shanghai residents solve the problem of garbage recycling difficulties.
+            I started this project independently and was responsible for the project's research, interface design, user testing and high-fidelity prototype production.
+          </p>
 
-      </section>
+        </section>
 
-      <!--
-      <section class="numbered_list_section">
-        <h3>Numbered Lists</h3>
-
-        <h4>CSS selector:</h4>
-        <p>ol</p>
-        <p>li</p>
-
-        <h4>Rendered element:</h4>
-        <ol>
-          <li>Item</li>
-          <li>Price</li>
-          <li>Quantity</li>
-        </ol> 
-      </section>
-      -->
-
+      </div>
     </div>
 
     <!-- // TEXT ELEMENTS SECTION -->
@@ -154,28 +139,43 @@
 
 
     <!-- COMBINED ELEMENTS SECTION // -->
-    <section id="combined_elements">
+    <section class="combined_elements">
       <h2>Combined Elements</h2>
 
       <section class="main_nav_section">
         <h3>Main Navigation</h3>
+          <h4>CSS selector:</h4>
+          <p>.container_nav</p>
 
-        <h4>Rendered elements:</h4>
-        <div class="container_nav">
-          <a href="work.html" id="my_name">Jiefang Li</a>
-          <nav id="top_nav">
-            <ul>
-              <li><a href="work.html">Work</a ></li>
-              <li><a href="about.html">About</a ></li>
-              <li ><a href="https://drive.google.com/file/d/1ilSDPr38J20eE-0xOIcTPWDny7pMqRMl/view?usp=share_link">Resume</a ></li>
-            </ul>
-          </nav>
-        </div>
+          <h4>Rendered elements:</h4>
+          <div class="container_nav">
+            <a href="work.html" id="my_name">Jiefang Li</a>
+            <nav class="top_nav">
+              <ul>
+                <li><a href="work.html">Work</a ></li>
+                <li><a href="about.html">About</a ></li>
+                <li ><a href="https://drive.google.com/file/d/1ilSDPr38J20eE-0xOIcTPWDny7pMqRMl/view?usp=share_link">Resume</a ></li>
+              </ul>
+            </nav>
+          </div>
+
+      </section>
+
+      <section class="work_navigation_section">
+        <h3>Work Navigation</h3>
+          <h4>CSS selector:</h4>
+          <p>.work_navigation</p>
+
+          <h4>Rendered elements:</h4>
+          <div class="work_navigation">
+            <a href="work.html"><i class="fas fa-arrow-left"></i>  Cercling Internship</a>
+            <a href="work2.html">iVW App <i class="fas fa-arrow-right"></i></a>
+          </div>
 
       </section>
 
 
-      <section class="product_list_section">
+      <section class="project_list_section">
         <h3>Project Listing</h3>
       
         <h4>CSS selector:</h4>
@@ -209,7 +209,7 @@
             </div>
 
             <div class="work">
-              <img class="work_image" src="images/work/image3.png" alt="Cercling Website">
+              <img class="work_image" id="work_image3" src="images/work/image3.png" alt="Cercling Website">
               <div class="work_text">
                 <h3>Cercling Web</h3>
                 <h4>Web App Design | Internship</h4>
@@ -247,8 +247,8 @@
           <h3>Fonts</h3>
           <p><strong>Plus Jakarta Sans</strong></p>
           <P>
-          font-family: 'Inter', sans-serif;
-          font-family: 'Plus Jakarta Sans', sans-serif</P>>
+          font-family: 'Inter', sans-serif;<br>
+          font-family: 'Plus Jakarta Sans', sans-serif.</P>
 
         </section>
         
@@ -258,7 +258,7 @@
 
           <div class="color_palettes">
             <div id="palette1">
-              <p>Secondary Colour: #E3D0B5</p>
+              <p>Secondary Colour: #C8E9DB</p>
               <p class="text-under-palettes">This colour can be applied to dividing lines.</p>
             </div>
             <div id="palette2">
@@ -292,32 +292,11 @@
       <h2>Citations</h2>
 
       <ul>
-        <li>W3Schools. (2022).<strong>Display a Month Input Control [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_month">here</a></li>
-        <li>Shay Howe. (2022).<strong>Building Forms [Online Tutorial]</strong>. Retrieved from <a href="https://learn.shayhowe.com/html-css/building-forms/#organizing-form-elements">here</a></li>
-        <li>W3Schools. (2022). <strong>How TO - Product Card [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/howto/howto_css_product_card.asp">here</a>.</li>
-        <li>W3Schools. (2022). <strong>How TO - Top Navigation [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">here</a>.</li>
-        <li>W3Schools. (2022). <strong>HTML Ordered Lists [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/html/html_lists_ordered.asp">here</a>.</li>
-        <li>Steve. (2021). <strong>Linking Image in HTML: How to create links from images [Online Tutorial]</strong>. Retrieved from <a href="https://pagedart.com/blog/linking-images-in-html/">here</a>.</li>
-        <li>W3Schools. (2022). <strong>HTML Input="radio" [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/tags/att_input_type_radio.asp">here</a>.</li>
-        <li>W3Schools. (2022). <strong>HTML Input="text" [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/tags/att_input_type_text.asp">here</a>.</li>
-        <li>Stackoverflow. (2022). <strong>How do you select a radio button in css? [Online Tutorial]</strong>. Retrieved from <a href="https://stackoverflow.com/questions/1002579/how-do-you-select-a-radio-button-in-css">here</a>.</li>
-        <li>Tutorialspoint. (2022). <strong>HTML - Text Links [Online Tutorial]</strong>. Retrieved from <a href="https://www.tutorialspoint.com/html/html_text_links.htm">here</a>.</li>
-        <li>W3Schools. (2022). <strong>HTML button type Attribute [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/tags/att_button_type.asp">here</a>.</li>
-        <li>W3Schools. (2022). <strong>CSS Links [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/css/css_link.asp">here</a>.</li>
-        <li>Stackoverflow. (2022). <strong>How to change border color of textarea on :focus [Online Tutorial]</strong>. Retrieved from <a href="https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus">here</a>.</li>
-        <li>Sara Cope. (2011). <strong>Box-shadow [Online Tutorial]</strong>. Retrieved from <a href="https://css-tricks.com/almanac/properties/b/box-shadow/#:~:text=The%20blur%20radius%20(required)%2C,be%2010px%20of%20total%20shadow.%20*/">here</a>.</li>
-        <li>W3Schools. (2022). <strong>CSS Opacity / Transparency [Online Tutorial]</strong>. Retrieved from <a href="https://www.w3schools.com/css/css_image_transparency.asp">here</a>.</li>
-        <li>mdn web docs. (2022). <strong>::placeholder [Online Tutorial]</strong>. Retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder">here</a>.</li>
-        <li>Warren Davies. (2021). <strong>Sticky navbar [Online Tutorial]</strong>. Retrieved from <a href="      https://alvarotrigo.com/blog/sticky-navbar/#:~:text=To%20create%20a%20sticky%20navbar%2C%20you%20use%20the%20position%3A%20fixed,stick%20to%20its%20parent%20element.">here</a>.</li>
-        <li>TAV CERAMICS. (2023). <strong>TAV CERAMICS SHOP [Images of products]</strong>. Retrieved from <a href="https://tavceramics.com/collections/all">here</a>.</li>
-        <li>yimi Shan. (2018). <strong>Use CSS to modify the radio style [Tutorial]</strong>. Retrieved from <a href="https://www.jianshu.com/p/e1dac58adb2c">here</a>.</li>
-        <li>Toddmotto. (2014). <strong>foreach.js [Javascript]</strong>. Retrieved from <a href="https://github.com/toddmotto/foreach">here</a>.</li>
-        <li>The Northern Kiln. (2022). <strong>Behind The Wheel - Jane Snider Pottery [Article]</strong>. Retrieved from <a href="https://thenorthernkiln.ca/blogs/behind-the-wheel/behind-the-wheel-jane-snider-pottery">here</a>.</li>
-        <li>Kiln 9 Ceramics. (Unknown). <strong>POTTERY WORKSHOPS with Kiln 9 Ceramics [Article]</strong>. Retrieved from <a href="https://www.kiln9ceramics.com/collections/workshops">here</a>.</li>
-        <li>BELLE CUSHING. (2014). <strong>Why Restaurants are Ditching White China for Hand-Made Ceramics [Article]</strong>. Retrieved from <a href="https://www.bonappetit.com/entertaining-style/trends-news/article/new-ceramics">here</a>.</li>
-        <li>Xiao Y start again. (2022). <strong>Make a flexible two-level menu (HTML, CSS, JavaScript) [Tutorial]</strong>. Retrieved from <a href="https://blog.csdn.net/weixin_43230812/article/details/123371827">here</a>.</li>
-        <li>Arya_1s. (2016). <strong>Pure CSS to achieve multi-level navigation bar [Tutorial]</strong>. Retrieved from <a href="https://blog.csdn.net/qq_20417227/article/details/52266686">here</a>.</li>
-        <li>coder coder! (2020). <strong>How to make an HTML anchor link jump to a specific part of the page? [Online Tutorial]</strong>. Retrieved from <a href="https://coder-coder.com/make-html-anchor-link-jump-specific-part-of-page/#:~:text=Link%20to%20the%20element%20in,(pound%2Fhashtag)%20symbol.">here</a>.</li>
+        <li>stackoverflow. (2022). <strong>Text that shows an underline on hover [Tutorial]</strong>. Retrieved from <a href="https://stackoverflow.com/questions/22674633/text-that-shows-an-underline-on-hover">here</a>.</li>
+        <li>tutorialspoint (2023). <strong>HTML - Email Tag [Tutorial]</strong>. Retrieved from <a href="https://www.tutorialspoint.com/html/html_email_links.htm">here</a>.</li>
+        <li>Warren Davies. (2021). <strong>CSS button hover effects [Online Tutorial]</strong>. Retrieved from <a href="https://alvarotrigo.com/blog/best-css-button-hover-effects/">here</a>.</li>
+        <li>Mdn web docs (2021). <strong>Box-sizing issues [Online Tutorial]</strong>. Retrieved from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">here</a>.</li>
+
       </ul>
     </section>
 
