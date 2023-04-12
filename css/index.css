@@ -110,6 +110,10 @@ nav li {
   position: absolute;
 }
 
+@keyframes moveup {
+  from {transform: translateY(0em); opacity: 0;}
+  to {transform: translateY(-2em); opacity: 1;}
+}
 
 .cover {
   max-width: 90%;
@@ -117,6 +121,7 @@ nav li {
   margin-left: auto;
   margin-right: auto;
   margin-top: 6rem;
+  animation: moveup 1s forwards;
 }
 
 .cover_h4 {
